@@ -2,6 +2,7 @@
 box-sizing: border-box;
 }
 body {
+  background-color: #353a41;
   padding: 0;
   margin:0;
   max-width: 100%;
@@ -9,36 +10,128 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 h1 {
+  color: white;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
+  text-shadow:5px 5px 5px black;
+}
+header {
+  display: inline;
+}
+ul {
+  margin-top: 5px;
+  text-align: center;
+  padding-left: 0;
+}
+li {
+  display: inline;
+}
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .6;
+  transition: all .5s;
+}
+a.twitter {
+  background-image: url(photos/twitter.svg);
+}
+a.linkedin {
+  background-image: url(photos/linkedin.svg);
+}
+a.github {
+  background-image: url(photos/github.svg);
+}
+a.social:hover {
+  opacity: 1;
 }
 .gallery {
-  max-width: 90%;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+::placeholder {
+  color: black;
+  font-weight: bold;
+}
+.img {
+  max-width: 89%;
   margin-left: auto;
   margin-right: auto;
 }
-.img {
- margin: 10px;
-}
 .search {
-  width: 100%;
+  width: 98%;
   padding: 10px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
 input {
-  height: 25px;
+  height: 30px;
   width: 200px;
   border-radius: 10px;
+}
+.backtop {
+  margin-left: 3px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 @media (min-width: 768px) {
 
 /* Base Styles -------------------- */
 h1 {
+  display:inline;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+header {
+  display: inline-block;
+}
+ul {
+  margin-top: 53px;
+  margin-bottom: 0;
+  margin-left: 50px;
+  list-style: none;
+}
+li {
+  display: inline;
+}
+.table {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
-  font-size: 2.5em;
+}
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .6;
+  transition: all .5s;
+}
+a.twitter {
+  background-image: url(photos/twitter.svg);
+}
+a.linkedin {
+  background-image: url(photos/linkedin.svg);
+}
+a.github {
+  background-image: url(photos/github.svg);
+}
+a.social:hover {
+  opacity: 1;
 }
 .gallery {
   text-align: center;
@@ -47,23 +140,32 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-top:25px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border: 10px solid #2f2c33;
 }
 .img {
   max-width: 25%;
   margin: 10px;
-  border-radius: 10px;
 }
-
 .search {
   width: 90%;
   margin: 0 auto;
-  padding: 10px 0;
+  padding-top: 0;
+  padding-bottom: 20px;
 }
 input {
   height: 40px;
   width: 400px;
   border-radius: 10px;
+}
+.backtop {
+  text-align: inherit;
+  position: absolute;
+  left: -1000px;
+  height: 0;
 }
 }

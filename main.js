@@ -4,7 +4,7 @@ $('[data-fancybox="gallery"]').fancybox({
   arrows: true,
   smallBtn: "auto",
   animationEffect: "zoom",
-  animationEffect: "fade",
+  transitionEffect: "fade",
   animationDuration: 1000,
 });
 const $gallery_items = $(".gallery a");
