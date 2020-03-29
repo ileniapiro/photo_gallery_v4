@@ -7,7 +7,7 @@ $('[data-fancybox="gallery"]').fancybox({
   transitionEffect: "fade",
   animationDuration: 1000,
 });
-const $gallery_items = $(".gallery a");
+  const $gallery_items = $(".gallery a");
 
 $("#search").on("keyup", function(event) {
   const $search = $(event.target).val().toUpperCase();
